@@ -2,3 +2,24 @@ body {
   background-image: url(https://blackwallpaperhd.com/wp-content/uploads/2022/01/stone5.jpg);
   background-size: cover;
 }
+
+.background {
+  width: 1100px;
+  height: 800px;
+}
+
+h1 {
+  font-size: 100px;
+  font-family:  "New Rocker", system-ui, "MedievalSharp", cursive; 
+  color: gainsboro;
+  }
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+
+}
