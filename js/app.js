@@ -69,14 +69,25 @@ const items = [
   // FUNCTIONS:
     // Shop ()
         // to buy a different weapon
+const steelSword = (player) => {
+  if (player.gold >= items[0].cost) {
+    player.currentWeapon = items[0]
+    player.gold -= items[0].cost
+    console.log(player.currentWeapon)
+  }
+}
+
     // Kill Goblin ()
         // To get gold coins 
 const killGoblin = (player) => {
   player.gold = player.gold + 10
+  console.log(player.gold)
 }
     // maybe make seperate buttons for each player if the above () doesnt work.
     // It works for one player if you add the parameters for the specified player.
     // Next need to link to a button for each player.
+        // killGoblin button working
+    
 
 
 

@@ -14,6 +14,12 @@ h1 {
   color: gainsboro;
   }
 
+.buttons {
+  display: flex;
+  justify-content:flex-start;
+}
+
+
 .header {
   display: flex;
   justify-content: center;
