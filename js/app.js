@@ -6,7 +6,7 @@ const playerOne = {
     accuarcy: 1,
     damage: 5,
   },
-  Gold: 50,
+  gold: 50,
 }
 
 const playerTwo = {
@@ -16,7 +16,7 @@ const playerTwo = {
     accuarcy: 1,
     damage: 5,
   },
-  Gold: 50,
+  gold: 50,
 }
 
 const items = [
@@ -43,6 +43,18 @@ const items = [
     accuarcy: .80,
     damage: 30,
     cost: 700,
+  },
+  {
+    name: "Dragon claws",
+    accuarcy: 1,
+    damage: 80,
+    cost: 2000,
+  },
+  {
+    name: "Armadyl God Sword",
+    accuarcy: .80,
+    damage: 100,
+    cost: 3000,
   }
 ]
 
@@ -53,12 +65,25 @@ const items = [
 // create the game loop to set to make the game turn based
 
 // Game loop consists of functions that will allow the players to choose how to spend their time before facing off against the final boss.
-// FUNCTIONS:
-  // Shop ()
-      // to buy a different weapon
-  // Kill Goblin ()
-      // To get gold coins 
-  // 
+
+  // FUNCTIONS:
+    // Shop ()
+        // to buy a different weapon
+    // Kill Goblin ()
+        // To get gold coins 
+const killGoblin = (player) => {
+  player.gold = player.gold + 10
+}
+    // maybe make seperate buttons for each player if the above () doesnt work.
+    // It works for one player if you add the parameters for the specified player.
+    // Next need to link to a button for each player.
+
+
+
+    // Challenge Boss ()
+    // Attack game loop 
+        // start with player 1 attack ()
+        // after plauer 2 attacks then activate boss attack () which attacks both players.
 
 // make the functions and attach them to the buttons to allow players to perform functions within the game loop
 
