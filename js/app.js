@@ -58,6 +58,12 @@ const items = [
   }
 ]
 
+const boss = {
+  name: "Crota",
+  hitpoints: 300,
+  accuarcy: .50,
+  damage: 25,
+}
 
 // Create the onload function
 
@@ -74,9 +80,60 @@ const steelSword = (player) => {
     player.currentWeapon = items[0]
     player.gold -= items[0].cost
     console.log(player.currentWeapon)
+  } else {
+    alert("You don't have enough gold")
   }
 }
 
+const rune2H = (player) => {
+  if (player.gold >= items[0].cost) {
+    player.currentWeapon = items[0]
+    player.gold -= items[0].cost
+    console.log(player.currentWeapon)
+  } else {
+    alert("You don't have enough gold")
+  }
+}
+
+const magicBow = (player) => {
+  if (player.gold >= items[0].cost) {
+    player.currentWeapon = items[0]
+    player.gold -= items[0].cost
+    console.log(player.currentWeapon)
+  } else {
+    alert("You don't have enough gold")
+  }
+}
+
+const fireStaff = (player) => {
+  if (player.gold >= items[0].cost) {
+    player.currentWeapon = items[0]
+    player.gold -= items[0].cost
+    console.log(player.currentWeapon)
+  } else {
+    alert("You don't have enough gold")
+  }
+}
+
+const dragonClaws = (player) => {
+  if (player.gold >= items[0].cost) {
+    player.currentWeapon = items[0]
+    player.gold -= items[0].cost
+    console.log(player.currentWeapon)
+  } else {
+    alert("You don't have enough gold")
+  }
+}
+
+const armadylGodSword = (player) => {
+  if (player.gold >= items[0].cost) {
+    player.currentWeapon = items[0]
+    player.gold -= items[0].cost
+    console.log(player.currentWeapon)
+  } else {
+    alert("You don't have enough gold")
+  }
+}
     // Kill Goblin ()
         // To get gold coins 
 const killGoblin = (player) => {
@@ -95,7 +152,21 @@ const killGoblin = (player) => {
     // Attack game loop 
         // start with player 1 attack ()
         // after plauer 2 attacks then activate boss attack () which attacks both players.
+const fightBoss = () => {
 
+}
+
+const attack = (player) => {
+  if (boss.hitpoints <= 0) {
+    alert ("You Win!")
+  } else if (playerOne.hitpoints <= 0 && playerTwo.hitpoints <=0) {
+    alert ("You lose")
+  } else if (player.currentWeapon.accuarcy >= Math.floor(Math.random()) ){
+    boss.hitpoints = boss.hitpoints - player.currentWeapon.damage
+    console.log(boss.hitpoints)
+  }
+  
+}
 // make the functions and attach them to the buttons to allow players to perform functions within the game loop
 
 

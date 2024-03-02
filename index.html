@@ -15,7 +15,11 @@
     <div class="header">
       <h1>A Knights Adventure</h1>
     </div>
+    <div>
+      <button onclick="fightBoss()" class="boss">Fight Boss</button>
+    </div>
     </header>
+
   <div class="container">
   <img  src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/17f49d1d-a3d9-44d3-b544-38f0f8b47fb7_scaled.jpg" class=background>
  
@@ -25,14 +29,26 @@
 
     <button onclick="killGoblin(playerTwo)" class="player2">p2 Kill Goblin</button>
   </div>
+  <div>
+    <button onclick="attack(playerOne)" class="attack">P1 ATTACK</button>
+    <button onclick="attack(playerTWO)" class="attack">P2 ATTACK</button>
+  </div>
 
-  <div id="hidden">
+  <div id="shop1">
     <button onclick="steelSword(playerOne)">Steel Sword</button>
-    <button onclick="rune2H()">Rune 2H</button>
-    <button onclick="magicBow()">Magic Bow</button>
-    <button onclick="fireStaff()">Fire Staff</button>
-    <button onclick="dragonClaws()">Dragon Claws</button>
-    <button onclick="armadylGodSword()">Aramadyl God Sword</button>
+    <button onclick="rune2H(playerOne)">Rune 2H</button>
+    <button onclick="magicBow(playerOne)">Magic Bow</button>
+    <button onclick="fireStaff(playerOne)">Fire Staff</button>
+    <button onclick="dragonClaws(playerOne)">Dragon Claws</button>
+    <button onclick="armadylGodSword(playerOne)">Aramadyl God Sword</button>
+  </div>
+  <div id="shop2">
+    <button onclick="steelSword(playerTwo)">Steel Sword</button>
+    <button onclick="rune2H(playerTwo)">Rune 2H</button>
+    <button onclick="magicBow(playerTwo)">Magic Bow</button>
+    <button onclick="fireStaff(playerTwo)">Fire Staff</button>
+    <button onclick="dragonClaws(playerTwo)">Dragon Claws</button>
+    <button onclick="armadylGodSword(playerTwo)">Aramadyl God Sword</button>
   </div>
 </body>
 </html>
