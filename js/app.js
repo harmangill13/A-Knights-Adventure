@@ -86,9 +86,9 @@ const steelSword = (player) => {
 }
 
 const rune2H = (player) => {
-  if (player.gold >= items[0].cost) {
-    player.currentWeapon = items[0]
-    player.gold -= items[0].cost
+  if (player.gold >= items[1].cost) {
+    player.currentWeapon = items[1]
+    player.gold -= items[1].cost
     console.log(player.currentWeapon)
   } else {
     alert("You don't have enough gold")
@@ -96,9 +96,9 @@ const rune2H = (player) => {
 }
 
 const magicBow = (player) => {
-  if (player.gold >= items[0].cost) {
-    player.currentWeapon = items[0]
-    player.gold -= items[0].cost
+  if (player.gold >= items[2].cost) {
+    player.currentWeapon = items[2]
+    player.gold -= items[2].cost
     console.log(player.currentWeapon)
   } else {
     alert("You don't have enough gold")
@@ -106,9 +106,9 @@ const magicBow = (player) => {
 }
 
 const fireStaff = (player) => {
-  if (player.gold >= items[0].cost) {
-    player.currentWeapon = items[0]
-    player.gold -= items[0].cost
+  if (player.gold >= items[3].cost) {
+    player.currentWeapon = items[3]
+    player.gold -= items[3].cost
     console.log(player.currentWeapon)
   } else {
     alert("You don't have enough gold")
@@ -116,9 +116,9 @@ const fireStaff = (player) => {
 }
 
 const dragonClaws = (player) => {
-  if (player.gold >= items[0].cost) {
-    player.currentWeapon = items[0]
-    player.gold -= items[0].cost
+  if (player.gold >= items[4].cost) {
+    player.currentWeapon = items[4]
+    player.gold -= items[4].cost
     console.log(player.currentWeapon)
   } else {
     alert("You don't have enough gold")
@@ -126,9 +126,9 @@ const dragonClaws = (player) => {
 }
 
 const armadylGodSword = (player) => {
-  if (player.gold >= items[0].cost) {
-    player.currentWeapon = items[0]
-    player.gold -= items[0].cost
+  if (player.gold >= items[5].cost) {
+    player.currentWeapon = items[5]
+    player.gold -= items[5].cost
     console.log(player.currentWeapon)
   } else {
     alert("You don't have enough gold")
@@ -153,20 +153,41 @@ const killGoblin = (player) => {
         // start with player 1 attack ()
         // after plauer 2 attacks then activate boss attack () which attacks both players.
 const fightBoss = () => {
-
+  alert ("Player one Attacks first, then player two, Crota will attack both players simultaneously")
+  document.getElementById("player2").addEventListener("click", bossAttack)
 }
 
+const bossAttack = () => {
+  document.getElementById("player2").addEventListener("click", bossAttack)
+  if (playerOne.hitpoints && playerTwo.hitpoints <= 0) {
+    alert ("YOU LOSE")
+  } else if (boss.accuarcy >= Math.floor(Math.random())){
+    playerOne.hitpoints = playerOne.hitpoints - boss.damage
+    playerTwo.hitpoints = playerTwo.hitpoints - boss.damage
+    console.log(playerOne.hitpoints && playerTwo.hitpoints)
+  } else {
+    alert ("You dodged Crota's attack")
+  }
+}
 const attack = (player) => {
+  const randomNum = Math.random(Math.random())
+  console.log(randomNum)
+
   if (boss.hitpoints <= 0) {
     alert ("You Win!")
   } else if (playerOne.hitpoints <= 0 && playerTwo.hitpoints <=0) {
     alert ("You lose")
-  } else if (player.currentWeapon.accuarcy >= Math.floor(Math.random()) ){
-    boss.hitpoints = boss.hitpoints - player.currentWeapon.damage
-    console.log(boss.hitpoints)
+  } else { 
+    if (player.currentWeapon.accuarcy >= randomNum) {
+      boss.hitpoints = boss.hitpoints - player.currentWeapon.damage
+      console.log("Crota has", + boss.hitpoints + " remaining")
+    
+    } else {
+      alert ("Crota dodged your attack")
+      console.log("Crota has", + boss.hitpoints + " remaining")
+    }
   }
-  
 }
 // make the functions and attach them to the buttons to allow players to perform functions within the game loop
-
-
+  // try hidding player 2 buttons until player one clicks their button then block the "display: none" for player 2 and go to blocking player one.
+  // This could be a way to switch turns 
