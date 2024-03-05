@@ -139,6 +139,7 @@ const armadylGodSword = (player) => {
 const killGoblin = (player) => {
   player.gold = player.gold + 10
   console.log(player.gold)
+  
 }
     // maybe make seperate buttons for each player if the above () doesnt work.
     // It works for one player if you add the parameters for the specified player.
@@ -161,7 +162,7 @@ const bossAttack = () => {
   document.getElementById("player2").addEventListener("click", bossAttack)
   if (playerOne.hitpoints && playerTwo.hitpoints <= 0) {
     alert ("YOU LOSE")
-  } else if (boss.accuarcy >= Math.floor(Math.random())){
+  } else if (boss.accuarcy >= Math.random(Math.random())){
     playerOne.hitpoints = playerOne.hitpoints - boss.damage
     playerTwo.hitpoints = playerTwo.hitpoints - boss.damage
     console.log(playerOne.hitpoints && playerTwo.hitpoints)
@@ -191,3 +192,18 @@ const attack = (player) => {
 // make the functions and attach them to the buttons to allow players to perform functions within the game loop
   // try hidding player 2 buttons until player one clicks their button then block the "display: none" for player 2 and go to blocking player one.
   // This could be a way to switch turns 
+window.onload = () => {
+  document.getElementById('player2Buttons').style.display = 'none'
+}
+  const hideButtons = () => {
+  const player1Buttons = document.getElementById('player1Buttons')
+  const player2Buttons = document.getElementById('player2Buttons')
+
+  if (player1Buttons.style.display !== 'none') {
+    player1Buttons.style.display = 'none'
+    player2Buttons.style.display = 'block'
+  } else {
+    player1Buttons.style.display = 'block'
+    player2Buttons.style.display = 'none'
+  }
+}
