@@ -24,37 +24,37 @@ const items = [
     name: "Steel sword",
     accuarcy: .80,
     damage: 10,
-    cost: 100,
+    cost: 500,
   },
   {
     name: "Rune 2h",
     accuarcy: .50,
     damage: 40,
-    cost: 500,
+    cost: 2000,
   },
   {
     name: "Magic bow",
     accuarcy: 1,
     damage: 10,
-    cost: 200
+    cost: 800,
   },
   {
     name: "Fire staff",
     accuarcy: .80,
     damage: 30,
-    cost: 700,
+    cost: 3000,
   },
   {
     name: "Dragon claws",
     accuarcy: 1,
     damage: 80,
-    cost: 2000,
+    cost: 8000,
   },
   {
     name: "Armadyl God Sword",
     accuarcy: .80,
     damage: 100,
-    cost: 3000,
+    cost: 10000,
   }
 ]
 
@@ -137,8 +137,9 @@ const armadylGodSword = (player) => {
     // Kill Goblin ()
         // To get gold coins 
 const killGoblin = (player) => {
-  player.gold = player.gold + 10
-  console.log(`${player} has ${player.gold} gold`)
+  const randomNum = Math.ceil(Math.random() * 100)
+  player.gold = player.gold + randomNum
+  console.log(`You have ${player.gold} gold`)
   
 }
     // maybe make seperate buttons for each player if the above () doesnt work.
