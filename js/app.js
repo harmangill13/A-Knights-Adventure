@@ -138,7 +138,7 @@ const armadylGodSword = (player) => {
         // To get gold coins 
 const killGoblin = (player) => {
   player.gold = player.gold + 10
-  console.log(player.gold)
+  console.log(`${player} has ${player.gold} gold`)
   
 }
     // maybe make seperate buttons for each player if the above () doesnt work.
@@ -158,14 +158,17 @@ const fightBoss = () => {
   document.getElementById("player2").addEventListener("click", bossAttack)
 }
 
+
+
 const bossAttack = () => {
-  document.getElementById("player2").addEventListener("click", bossAttack)
+  const randomNum = Math.random(Math.random())
+  console.log(randomNum)
   if (playerOne.hitpoints && playerTwo.hitpoints <= 0) {
     alert ("YOU LOSE")
-  } else if (boss.accuarcy >= Math.random(Math.random())){
+  } else if (boss.accuarcy >= randomNum){
     playerOne.hitpoints = playerOne.hitpoints - boss.damage
     playerTwo.hitpoints = playerTwo.hitpoints - boss.damage
-    console.log(playerOne.hitpoints && playerTwo.hitpoints)
+    console.log(`Players have ${playerOne.hitpoints} && ${playerTwo.hitpoints} hitpoints left`)
   } else {
     alert ("You dodged Crota's attack")
   }
@@ -182,10 +185,12 @@ const attack = (player) => {
     if (player.currentWeapon.accuarcy >= randomNum) {
       boss.hitpoints = boss.hitpoints - player.currentWeapon.damage
       console.log("Crota has", + boss.hitpoints + " remaining")
+      bossAttack()
     
     } else {
       alert ("Crota dodged your attack")
       console.log("Crota has", + boss.hitpoints + " remaining")
+      bossAttack()
     }
   }
 }
@@ -194,11 +199,16 @@ const attack = (player) => {
   // This could be a way to switch turns 
 window.onload = () => {
   document.getElementById('player2Buttons').style.display = 'none'
+  const playerOneStats = () => {
+    document.getElementById("playerOneHitpoints").textContent = playerOne.hitpoints
+    document.getElementById("playerOneGold").textContent = playerOne.gold
+  }
+  playerOneStats()
 }
   const hideButtons = () => {
   const player1Buttons = document.getElementById('player1Buttons')
   const player2Buttons = document.getElementById('player2Buttons')
-
+  
   if (player1Buttons.style.display !== 'none') {
     player1Buttons.style.display = 'none'
     player2Buttons.style.display = 'block'
@@ -206,4 +216,15 @@ window.onload = () => {
     player1Buttons.style.display = 'block'
     player2Buttons.style.display = 'none'
   }
+  
 }
+
+// Styling the game and making it work better
+  // Add hitpoints and gold to the image
+    // make a div with an id
+    // getelementbyid and set it equal to playerone keys
+  
+  // add boss hitpoints to the image
+  // randomize how much gold each player gets from a kill
+  // update how much money each player gets from the boss kill
+  // style buttons layout 

@@ -13,7 +13,9 @@ h1 {
   font-family:  "New Rocker", system-ui, "MedievalSharp", cursive; 
   color: gainsboro;
   }
-
+#player1Stats {
+  color: red;
+}
 
 .buttons {
   display: flex;

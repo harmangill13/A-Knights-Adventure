@@ -21,10 +21,12 @@
     </header>
 
   <div class="container">
-  <img  src="https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/17f49d1d-a3d9-44d3-b544-38f0f8b47fb7_scaled.jpg" class=background>
- 
+    <img  src="A_knights.png" class=background>
   </div>
-
+<div id="player1Stats">
+  <p>Player One Hitpoints: <span id="playerOneHitpoints"></span> </p>
+  <p>Player One Gold: <span id="playerOneGold"></span> </p>
+</div>
   <div id="player1Buttons">
     <button onclick="killGoblin(playerOne)" class="player1">P1 Kill Goblin</button>
     <button onclick="attack(playerOne)" class="player1">P1 ATTACK</button>
@@ -38,7 +40,7 @@
 <!-- player 2 -->
   <div id="player2Buttons">
     <button onclick="killGoblin(playerTwo)" class="player2">p2 Kill Goblin</button>
-    <button onclick="attack(playerTwo)" class="player2">P2 ATTACK</button>
+    <button onclick="attack(playerTwo)" class="player2att">P2 ATTACK</button>
     <button class="player2" onclick="steelSword(playerTwo)">Steel Sword</button>
     <button class="player2" onclick="rune2H(playerTwo)">Rune 2H</button>
     <button class="player2" onclick="magicBow(playerTwo)">Magic Bow</button>
@@ -46,5 +48,6 @@
     <button class="player2" onclick="dragonClaws(playerTwo)">Dragon Claws</button>
     <button class="player2" onclick="armadylGodSword(playerTwo)">Aramadyl God Sword</button>
   </div>
+ 
 </body>
 </html>
