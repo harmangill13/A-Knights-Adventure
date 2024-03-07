@@ -3,10 +3,10 @@ body {
   background-size: cover;
 }
 
-.background {
+/* .background {
   width: 140px;
   height: 140px;
-}
+} */
 
 h1 {
   font-size: 100px;
@@ -38,15 +38,72 @@ h1 {
   flex-wrap: wrap;
   align-content: flex-start;
   position: relative;
+ 
 }
 
 .char1 {
   position: absolute;
-  top: 50%;
-  right: 30%
+  top: 60%;
+  right: 30%;
+  width: 150px;
 }
 
 .char2 {
   position: absolute;
-  top: 41%;
+  top: 50%;
+  left: 50%; 
+  width: 150px;
+}
+
+.castle1 {
+  position: absolute;
+  top: 65.1%;
+  right: 87.4%
+}
+
+.castle2 {
+  position: absolute;
+  top: 40%;
+  right: 87.4%
+}
+
+.castle3 {
+  position: absolute;
+  top: 64.1%;
+  right: 79%;
+}
+
+.castle4 {
+  position: absolute;
+  top: 40.1%;
+  right: 79%;
+}
+
+.home1 {
+  position: absolute;
+  top: 35%;
+  left: 72%
+}
+
+.home2 {
+  position: absolute;
+  top: 35%;
+  left: 80%;
+}
+
+.farm {
+  position: absolute;
+  left: 75%;
+}
+
+.home3 {
+  position: absolute;
+  top: 60%;
+  left: 72%;
+}
+
+.home4 {
+  position: absolute;
+  top: 60%;
+  left: 85%;
 }
