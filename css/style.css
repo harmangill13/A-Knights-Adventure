@@ -11,7 +11,7 @@ body {
 h1 {
   font-size: 100px;
   font-family:  "New Rocker", system-ui, "MedievalSharp", cursive; 
-  color: gainsboro;
+  color: olive;
   }
 #player1Stats {
   color: red;
@@ -30,6 +30,7 @@ h1 {
 .header {
   display: flex;
   justify-content: center;
+  
 }
 
 .container {
@@ -114,3 +115,16 @@ h1 {
   right: 50%;
   width: 250px;
 }
+
+.logo {
+  position: relative;
+  align-items: center;
+  z-index: -1;
+  width:300px;
+}
+
+.header1 {
+  position: absolute;
+  top: 8%;
+}
+
