@@ -229,3 +229,4 @@ window.onload = () => {
   // randomize how much gold each player gets from a kill
   // update how much money each player gets from the boss kill
   // style buttons layout 
+    // add hovering text on buttons

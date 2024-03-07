@@ -4,8 +4,8 @@ body {
 }
 
 .background {
-  width: 1100px;
-  height: 800px;
+  width: 140px;
+  height: 140px;
 }
 
 h1 {
@@ -31,8 +31,22 @@ h1 {
   display: flex;
   justify-content: center;
 }
+
 .container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  position: relative;
+}
 
+.char1 {
+  position: absolute;
+  top: 50%;
+  right: 30%
+}
+
+.char2 {
+  position: absolute;
+  top: 41%;
 }
