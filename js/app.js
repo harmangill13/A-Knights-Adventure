@@ -47,12 +47,12 @@ const items = [
   {
     name: "Dragon claws",
     accuarcy: 1,
-    damage: 80,
+    damage: 50,
     cost: 8000,
   },
   {
     name: "Armadyl God Sword",
-    accuarcy: .80,
+    accuarcy: .60,
     damage: 100,
     cost: 10000,
   }
@@ -230,3 +230,7 @@ window.onload = () => {
   // update how much money each player gets from the boss kill
   // style buttons layout 
     // add hovering text on buttons
+  // rules button
+    const rules = () => {
+      alert ("Game Rules: Each players gets to perform one action per turn. After performing their action, press the 'pass turn' button to pass turn to the next player. Kill goblins to receive gold, and save up to buy better items. Once you feel confident, you can challenge Crota. The same rules apply here where each player can only attack once per turn and must press the pass turn button.")
+    }
