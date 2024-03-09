@@ -17,10 +17,6 @@ h1 {
   color: red;
 }
 
-.buttons {
-  display: flex;
-  justify-content:flex-start;
-}
 
 .boss {
   display: flex;
@@ -128,4 +124,21 @@ h1 {
   top: 8%;
 }
 
+#boss {
+  font-size: 40px;
+  position: absolute;
+  left: 40%;
+  bottom: 27%;
+}
 
+.player1 {
+  font-size: 20px;
+  display: flex;
+  
+}
+
+.player2 {
+  font-size: 20px;
+  display: flex;
+
+}

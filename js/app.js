@@ -60,7 +60,7 @@ const items = [
 
 const boss = {
   name: "Crota",
-  hitpoints: 300,
+  hitpoints: 200,
   accuarcy: .50,
   damage: 25,
 }
@@ -213,9 +213,11 @@ window.onload = () => {
   if (player1Buttons.style.display !== 'none') {
     player1Buttons.style.display = 'none'
     player2Buttons.style.display = 'block'
+    alert("Player 2 Turn")
   } else {
     player1Buttons.style.display = 'block'
     player2Buttons.style.display = 'none'
+    alert("Player 1 Turn")
   }
   
 }
